@@ -26,8 +26,8 @@ This will install all the required dependencies, including Expo.
 Create a .env file in the project root and add the following line:
 makefile
 Copy code
-EXPO_PUBLIC_API_URL=" http://"PUT HERE YOUR IP":3000""
-Replace "http://"PUT HERE YOUR IP":3000" with your actual IP address followed by :3000.
+EXPO_PUBLIC_API_URL=" http://"PUT HERE YOUR IP":8000""
+Replace "http://"PUT HERE YOUR IP":8000" with your actual IP address followed by :8000.
 # Start the Application
 You can start the application using Expo by running one of the following commands:
 npx expo start 
