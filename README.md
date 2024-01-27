@@ -35,8 +35,10 @@ than scan the qr code for ios or use android emulator to open the app on android
 Usage
 After starting the application, you can use it on your device or emulator. The app should connect to your specified API URL set in the .env file.
 # Starting-Server
-The db.json file has to be started through the terminal, and it has to be written the following commands:
-npx json-server db.json
+The server has to be started through the terminal, and it has to be written the following commands:
+it has to be opened two different terminals:
+cd Rate-Professor-db and than 
+npm start 
 Dependencies
 This project uses the following major dependencies:
 
