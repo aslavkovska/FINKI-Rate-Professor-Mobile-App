@@ -29,8 +29,8 @@ export default function LocationService() {
     Alert.alert("Error", errorMsg);
   }
   const defaultRegion = {
-    latitude: 41.975107,
-    longitude: 21.454616,
+    latitude: 42.00416,
+    longitude: 21.40955,
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
   };
@@ -38,14 +38,14 @@ export default function LocationService() {
     <View style={styles.container}>
       <MapView
         style={styles.map}
-        // initialRegion={{
-        //   latitude: location ? location.latitude : 0,
-        //   longitude: location ? location.longitude : 0,
-        //   latitudeDelta: 0.0922,
-        //   longitudeDelta: 0.0421,
-        // }}
+        initialRegion={{
+          latitude: location ? location.latitude : defaultRegion.latitude,
+          longitude: location ? location.longitude : defaultRegion.longitude,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
         // Only with a default region works, cause it have to be PAID FOR A GOOGLE MAP API
-        initialRegion={defaultRegion}
+        //initialRegion={defaultRegion}
       >
         {location && <Marker coordinate={location} title={"Your Location"} />}
       </MapView>
