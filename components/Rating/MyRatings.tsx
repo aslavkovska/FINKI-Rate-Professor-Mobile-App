@@ -4,6 +4,7 @@ import { RatingStyles } from "./RatingStyle";
 import axios from "axios";
 import { TCard } from "../../types/ProjectTypes";
 import RatingWidget from "./RatingWidget";
+import { TouchableOpacity } from "react-native";
 
 const MyRatings = () => {
   const [myrating, setMyRating] = useState<TCard[]>([]);
@@ -29,7 +30,7 @@ const MyRatings = () => {
               style={RatingStyles.cardImage}
             />
             <Text style={RatingStyles.cardText}>
-              Др. {professorCard.name} {professorCard.surname}
+              {professorCard.status} {professorCard.name} {professorCard.surname}
             </Text>
             <Text style={RatingStyles.cardText}>{professorCard.email}</Text>
             <RatingWidget

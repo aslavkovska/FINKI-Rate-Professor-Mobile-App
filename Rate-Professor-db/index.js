@@ -14,5 +14,5 @@ server.use(router)
 const PORT = 8000
 
 server.listen(PORT, () => {
-  console.log(`JSON Server is running on http://192.168.0.172:${PORT}`)
+  console.log(`JSON Server is running on http://172.20.10.2:${PORT}`)
 })

@@ -19,7 +19,7 @@ const RatingPage = () => {
   const [reviews, setTextValue] = useState("");
   const [grade, setRateValue] = useState(0);
   const route = useRoute<RatingPageRouteProp>();
-  const { id, name, surname, image, email } = route.params;
+  const { id, name, surname, image, email, status } = route.params;
   const [inputEmail, setEmail] = useState("");
 
   const handleRate = () => {
@@ -67,14 +67,14 @@ const RatingPage = () => {
         <Image source={{ uri: image }} style={styles.imageStyle} />
         <View style={styles.InfoParagraph}>
           <Text style={styles.nameText}>
-            Д-р {name} {surname}
+            {status}{name} {surname}
           </Text>
           <Text style={styles.emailText}>{email}</Text>
           <RatingWidget setRating={grade} handleChange={handleRatingChange} />
         </View>
       </View>
       <TextInput
-        placeholder="Enter your email.."
+        placeholder="Enter your students email..."
         value={inputEmail}
         style={RatingStyles.textInput}
         onChangeText={setEmail}
